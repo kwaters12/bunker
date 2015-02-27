@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bunker"
   gem.homepage = "http://github.com/kwaters12/bunker"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{API Wrapper for Zilyo}
+  gem.description = %Q{Use HTTParty and Jeweler to create a wrapper custom gem.}
   gem.email = "kellywaters@gmail.com"
   gem.authors = ["kwaters12"]
   # dependencies defined in Gemfile
@@ -26,9 +26,10 @@ end
 Jeweler::RubygemsDotOrgTasks.new
 
 require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
+Rake::TestTask.new do |test|
   test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
+  test.ruby_opts << "-rubygems"
+  test.pattern = 'test/**/*_test.rb'
   test.verbose = true
 end
 
