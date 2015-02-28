@@ -6,7 +6,7 @@ module Bunker
 
     DEFAULT_ENDPOINT        = 'https://zilyo.p.mashape.com/'
     DEFAULT_METHOD          = :get
-    DEFAULT_USER_AGENT      = "Bunker API Ruby Gem #{Bunker::VERSION}".freeze
+    # DEFAULT_USER_AGENT      = "Bunker API Ruby Gem #{Bunker::VERSION}".freeze
 
     DEFAULT_API_KEY         = nil
     DEFAULT_FORMAT          = :json
@@ -24,7 +24,7 @@ module Bunker
     def reset
       self.endpoint     = DEFAULT_ENDPOINT
       self.method       = DEFAULT_METHOD
-      self.user_agent   = DEFAULT_USER_AGENT
+      # self.user_agent   = DEFAULT_USER_AGENT
 
       self.api_key      = DEFAULT_API_KEY
       self.format       = DEFAULT_FORMAT

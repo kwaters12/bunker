@@ -10,7 +10,13 @@ module Bunker
     end
 
     def suggestion
-      self.class.get("/search", @options)
+      @response = self.class.get("/search?latitude=52.5306438&longitude=13.3830683&resultsPerPage=1", @options)
+      # puts JSON.pretty_generate(@response.request)
+      @data = JSON.parse(@response.body)
+      puts @data
+
+      puts @data['result'][0]['photos'][0]['large']
+
     end
   end
 
